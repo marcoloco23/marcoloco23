@@ -13,5 +13,3 @@
 ![Reactions](./reactions.svg)
 
 ![Stargazers](./stargazers.svg)
-
-.
