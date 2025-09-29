@@ -1,7 +1,7 @@
 # GitHub Metrics Generation Workflow
 # Powered by lowlighter/metrics: https://github.com/lowlighter/metrics
 # Documentation: https://github.com/lowlighter/metrics/blob/master/README.md
-# 
+#
 # This workflow generates comprehensive GitHub statistics and renders them as SVG files
 # The generated files are automatically committed to the repository and displayed in README.md
 #
@@ -25,27 +25,35 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: read
+      metadata: read
     steps:
       - name: Generate GitHub Metrics
         uses: lowlighter/metrics@latest
         with:
+          # Configuration reference: https://github.com/lowlighter/metrics/blob/master/.github/readme/partials/documentation/setup/action.md
           # Authentication token (required)
           # Create at: https://github.com/settings/tokens
-          # Required scopes: public_repo, read:user, read:org
+          # Required scopes: public_repo, read:user, read:org, repo (for private repos)
           token: ${{ secrets.METRICS_TOKEN }}
+          
+          # Use GitHub token for commits (recommended approach)
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          committer_branch: main
+          committer_message: "Update GitHub metrics"
 
           # === CORE CONFIGURATION ===
           user: marcoloco23
           commits_authoring: marcoloco23, ${{ secrets.AUTHOR_EMAILS }}
           config_timezone: America/New_York
           template: classic
-          
+
           # Repository settings
           repositories: 1000
           repositories_batch: 5
           repositories_affiliations: owner, collaborator, organization_member
           repositories_skipped: ""
-          
+
           # Output configuration - generates multiple SVG files
           config_order: base.header, base.activity+community, isocalendar, habits, languages, notable, reactions, stargazers, achievements, calendar
 
@@ -106,8 +114,7 @@ jobs:
           plugin_stargazers: yes
           plugin_stargazers_charts: yes
           plugin_stargazers_charts_type: classic
-          plugin_stargazers_worldmap: yes
-          plugin_stargazers_worldmap_token: ${{ secrets.GOOGLE_MAP_TOKEN }}
+          plugin_stargazers_worldmap: no # Disabled to avoid API dependency
 
           # === PLUGIN: ACHIEVEMENTS ===
           # GitHub achievements and badges
@@ -120,3 +127,19 @@ jobs:
           # Contribution calendar with enhanced styling
           plugin_calendar: yes
           plugin_calendar_limit: 0
+
+          # === OPTIMIZATION SETTINGS ===
+          # Performance and reliability improvements
+          optimize: css, xml, svg
+          experimental_features: --optimize-svg
+          use_prebuilt_image: yes
+
+          # Error handling
+          plugins_errors_fatal: no
+          debug: no
+          verify: no
+
+          # Output settings
+          config_display: large
+          config_animations: yes
+          config_padding: 6%

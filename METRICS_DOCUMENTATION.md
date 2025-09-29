@@ -231,10 +231,12 @@ plugin_music_top_type: tracks
 ## 📚 Resources
 
 - **Main Documentation:** https://github.com/lowlighter/metrics
+- **GitHub Action Setup:** https://github.com/lowlighter/metrics/blob/master/.github/readme/partials/documentation/setup/action.md
 - **Plugin Documentation:** https://github.com/lowlighter/metrics/blob/master/README.md#-plugins
 - **Template Documentation:** https://github.com/lowlighter/metrics/blob/master/README.md#-templates
 - **Configuration Examples:** https://github.com/lowlighter/metrics/tree/master/.github/workflows
 - **Community Examples:** https://github.com/lowlighter/metrics/blob/master/source/templates/community/README.md
+- **Official Action Marketplace:** https://github.com/marketplace/actions/metrics-embed
 
 ## 📝 Version History
 
