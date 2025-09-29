@@ -12,32 +12,7 @@
 
 *Automatically updated daily using [lowlighter/metrics](https://github.com/lowlighter/metrics)*
 
-### 🏠 Profile Overview
-![Base](./base.svg)
-
-### 📅 Contribution Calendar
-![Isocalendar](./isocalendar.svg)
-
-### 💻 Coding Habits & Patterns
-![Habits](./habits.svg)
-
-### 🈷️ Programming Languages
-![Languages](./languages.svg)
-
-### 🏆 Notable Contributions
-![Notable](./notable.svg)
-
-### 💬 Community Engagement
-![Reactions](./reactions.svg)
-
-### ⭐ Repository Stargazers
-![Stargazers](./stargazers.svg)
-
-### 🎯 GitHub Achievements
-![Achievements](./achievements.svg)
-
-### 📈 Contribution Activity
-![Calendar](./calendar.svg)
+![GitHub Metrics](./github-metrics.svg)
 
 ---
 
