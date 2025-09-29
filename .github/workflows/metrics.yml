@@ -26,7 +26,6 @@ jobs:
     permissions:
       contents: write
       actions: read
-      metadata: read
     steps:
       - name: Generate GitHub Metrics
         uses: lowlighter/metrics@latest
@@ -36,7 +35,7 @@ jobs:
           # Create at: https://github.com/settings/tokens
           # Required scopes: public_repo, read:user, read:org, repo (for private repos)
           token: ${{ secrets.METRICS_TOKEN }}
-          
+
           # Use GitHub token for commits (recommended approach)
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           committer_branch: main
