@@ -81,13 +81,13 @@ jobs:
           # Programming languages breakdown
           plugin_languages: yes
           plugin_languages_details: percentage, lines, bytes-size
-          plugin_languages_indepth: yes
+          plugin_languages_indepth: no
           plugin_languages_analysis_timeout: 30
           plugin_languages_categories: programming
           plugin_languages_colors: github
-          plugin_languages_sections: most-used, recently-used
+          plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
-          plugin_languages_limit: 12
+          plugin_languages_limit: 10
 
           # === PLUGIN: NOTABLE CONTRIBUTIONS ===
           # Highlights significant contributions
