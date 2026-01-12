@@ -9,15 +9,9 @@
 
 ---
 
-## `> cat about.txt`
+**AI/ML + Full-Stack + Systems**
 
-```
-Location:    Somewhere with good internet
-Focus:       AI/ML, Full-Stack, Systems
-Stack:       Python, TypeScript, Go, Rust
-Approach:    Ship fast, iterate faster
-Status:      Building
-```
+Building things that solve real problems.
 
 ---
 
